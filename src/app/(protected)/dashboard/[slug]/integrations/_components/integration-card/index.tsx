@@ -22,7 +22,7 @@ const IntegrationCard = ({ title, icon, strategy, description }: Props) => {
         queryFn: onUserInfo
     })
 
-    const integrated = data?.data?.integrations.find((integration) => integration.name === strategy)
+    const integrated = data?.data?.integrations.find((integration: { name: string }) => integration.name === strategy)
 
     return (
         <div className='border-2 border-[#3352cc] rounded-2xl gap-x-5 p-5 flex items-center justify-between'>
