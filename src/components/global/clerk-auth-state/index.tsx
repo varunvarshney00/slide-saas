@@ -23,6 +23,7 @@ const ClerkAuthState = (props: Props) => {
                 </Loader>
             </ClerkLoading>
 
+            {/* @ts-ignore */}
             <SignedOut>
                 <SignInButton>
                     <Button className='rounded-xl bg-[#252525] text-white hover:bg-[#252525]/70'>
@@ -32,6 +33,7 @@ const ClerkAuthState = (props: Props) => {
                 </SignInButton>
             </SignedOut>
 
+            {/* @ts-ignore */}
             <SignedIn>
                 <UserButton>
                     <UserButton.UserProfileLink

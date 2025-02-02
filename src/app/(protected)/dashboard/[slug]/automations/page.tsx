@@ -7,13 +7,12 @@ type Props = {}
 
 const Page = (props: Props) => {
 
-    
 
     return (
         <div className='grid grid-cols-1 lg:grid-cols-6 gap-5'>
 
             <div className='lg:col-span-4'>
-                <AutomationList/>
+                <AutomationList />
             </div>
 
             <div className='lg:col-span-2'>
@@ -25,7 +24,7 @@ const Page = (props: Props) => {
 
                     <div className='flex flex-col gap-y-3'>
                         {[1, 2, 3].map((item) => (
-                            <div className='flex justify-between items-start'>
+                            <div key={item} className='flex justify-between items-start'>
                                 <div className='flex flex-col'>
                                     <h3 className='font-medium'>Direct traffic towards website.</h3>
                                     <p className='text-text-secondary text-sm'>24 December 2024</p>

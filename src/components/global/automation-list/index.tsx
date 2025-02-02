@@ -56,7 +56,7 @@ const AutomationList = (props: Props) => {
                             <div className='flex gap-x-2 flex-wrap mt-3'>
 
                                 {
-                                    automation.keywords.map((keyword, key) => (
+                                    automation.keywords.map((keyword: { id: string, word: string }) => (
                                         <div
                                             key={keyword.id}
                                             className={cn('rounded-full px-4 py-1 capitalize',

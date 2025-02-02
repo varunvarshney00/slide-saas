@@ -21,7 +21,7 @@ const Keywords = ({ id }: Props) => {
       <div>
         {data?.data?.keywords && data?.data?.keywords.length > 0 && data?.data?.keywords.map((word) =>
           word.id !== latestVariable?.variables?.id && (
-            <div className="bg-background-80 flex items-center gap-x-2 capitalize text-text-secondary py-1 px-4 rounded-full">
+            <div key={word?.id} className="bg-background-80 flex items-center gap-x-2 capitalize text-text-secondary py-1 px-4 rounded-full">
               <p>{word.word}</p>
             </div>
           )
