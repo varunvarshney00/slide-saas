@@ -14,7 +14,7 @@ export const sendDM = async (
     prompt: string,
     token: string
 ) => {
-    console.log('sending message')
+    console.log('sending message-->', userId, recieverId, prompt, token)
     return await axios.post(
         `${process.env.INSTAGRAM_BASE_URL}/v21.0/${userId}/messages`,
         {

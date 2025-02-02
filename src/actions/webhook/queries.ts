@@ -105,6 +105,7 @@ export const getKeywordPost = async (postId: string, automationId: string) => {
 }
 
 export const getChatHistory = async (sender: string, receiver: string) => {
+    console.log('getchathistoy k inside')
     const history = await client.dms.findMany({
         where: {
             AND: [{ senderId: sender }, { receiver }]
@@ -113,6 +114,7 @@ export const getChatHistory = async (sender: string, receiver: string) => {
             createdAt: 'asc'
         }
     })
+    console.log('history inside db-->', history)
 
     const chatSession: { role: 'assistant' | 'user', content: string }[] = history.map((chat) => {
         return {
