@@ -12,6 +12,7 @@ import { useMutationDataState } from '@/hooks/use-mutation-data'
 
 type Props = {}
 
+
 const AutomationList = (props: Props) => {
 
     const { data } = useQueryAutomations();
