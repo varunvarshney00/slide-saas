@@ -17,8 +17,8 @@ model User {
   id           String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   clerkId      String         @unique
   email        String         @unique
-  firstname    String?        @unique
-  lastname     String?        @unique
+  firstname    String?        
+  lastname     String?        
   createdAt    DateTime       @default(now())
   subscription Subscription?
   integrations Integrations[]

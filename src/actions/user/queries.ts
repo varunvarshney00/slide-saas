@@ -22,6 +22,7 @@ export const findUser = async (clerkId: string) => {
 }
 
 export const createUser = async (clerkId: string, firstname: string, lastname: string, email: string) => {
+    console.log('run 4')
     return await client.user.create({
         data: {
             clerkId,
@@ -37,6 +38,7 @@ export const createUser = async (clerkId: string, firstname: string, lastname: s
             lastname: true,
         },
     })
+    console.log('run 5')
 }
 
 export const updateSubscription = async (

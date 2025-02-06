@@ -16,9 +16,17 @@ export const onCurrentUser = async () => {
 
 export const onBoardUser = async () => {
     const user = await onCurrentUser();
+    console.log('run 1')
+    console.log(user.id)
+    console.log(user.firstName)
+    console.log(user.lastName)
+    console.log(user.emailAddresses[0].emailAddress)
 
     try {
         const found = await findUser(user.id);
+        console.log('run 2')
+        console.log(found)
+
         if (found) {
             if (found.integrations.length > 0) {
                 const today = new Date();
@@ -45,6 +53,8 @@ export const onBoardUser = async () => {
                     }
                 }
             }
+            console.log('run 3')
+
 
             return {
                 status: 200,
